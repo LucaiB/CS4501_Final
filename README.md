@@ -7,19 +7,19 @@ Open CloudShell within your AWS account.
 
 Run the following command to clone this Git repository to access the required files for this project:
 
-git clone https://github.com/aws-samples/pgp-decryption-for-transfer-family.git
+git clone https://github.com/LucaiB/CS4501_Final.git
 
-Change into the new pgp-decryption-for-transfer-family directory:
+Change into the new directory:
 
-cd pgp-decryption-for-transfer-family/
+cd CS4501_Final/
 
-Run this command to give the setupEnvironment.sh script executable permissions:
+Run this command to give the environmentSetup.sh script executable permissions:
 
-chmod +x setupEnvironment.sh
+chmod +x environmentSetup.sh
 
 Run this command to create the required IAM roles and Lambda layer:
 
-./setupEnvironment.sh
+./environmentSetup.sh
 
 Now, deploy the CloudFormation stack that will build IAM roles and Lambda function:
 
