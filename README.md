@@ -2,7 +2,7 @@
 Final Project for CS4501
 
 
-**CloudShell - Deploying setupEnvironment bash script and CloudFormation stacks.**
+**CloudShell - Deploying environmentSetup bash script and CloudFormation stacks.**
 Open CloudShell within your AWS account.
 
 Run the following command to clone this Git repository to access the required files for this project:
@@ -25,7 +25,7 @@ Now, deploy the CloudFormation stack that will build IAM roles and Lambda functi
 
 sam deploy --guided --capabilities CAPABILITY_NAMED_IAM
 
-Respond to the following prompts:
+Respond to the following prompts...
 
 Enter in a stack name:
 
