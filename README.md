@@ -39,41 +39,40 @@ Final Project for CS4501
 
 **Creating Transfer Family Server by deploying a Transfer Family Server with a custom Secrets Manager based identity provider via CloudFormation stack.**
 
-In CloudShell, run the following:
+  - In CloudShell, run the following: 
+    
+    - Create a new directory for this CloudFormation stack and change into the new directory: 
+        
+        `mkdir tmp`  
+        
+        `cd tmp`
+    
+    - Download the CloudFormation stack using the link mentioned on the blog post linked above, at the time of creating this, the command is as follows: 
+    
+        `wget https://s3.amazonaws.com/aws-transfer-resources/custom-idp-templates/aws-transfer-custom-idp-secrets-manager-sourceip-protocol-support-apig.zip`
 
-Create a new directory for this CloudFormation stack and change into the new directory:
-
-mkdir tmp
-
-cd tmp
-
-Download the CloudFormation stack using the link mentioned on the blog post linked above, at the time of creating this, the command is as follows:
-
-wget https://s3.amazonaws.com/aws-transfer-resources/custom-idp-templates/aws-transfer-custom-idp-secrets-manager-sourceip-protocol-support-apig.zip
-
-After downloading the zip, unzip it:
-
-unzip aws-transfer-custom-idp-secrets-manager-sourceip-protocol-support-apig.zip
-
-Run the following command:
-
-sam deploy --guided
-
-Respond to the following prompts:
-
-Enter in a stack name:
-Select a region: Press enter to leave as default
-Parameter CreateServer [true]: Press enter to leave as default
-Parameter SecretsManagerRegion []: Press enter to leave as default
-Parameter TransferEndpointType [PUBLIC]: Press enter to leave as default
-Parameter TransferSubnetIDs []: Press enter to leave as default
-Parameter TransferVPCID []: Press enter to leave as default
-Confirm changes before deploy[y/N]: n
-Allow SAM CLI IAM role creation[Y/n]: y
-Disable rollback [y/N]: n
-Save arguments to configuration file [Y/n]: y
-SAM configuration file [samconfig.toml]: Press enter to leave as default
-SAM configuration environment [default]: Press enter to leave as default
+    - After downloading the zip, unzip it: 
+  
+        `unzip aws-transfer-custom-idp-secrets-manager-sourceip-protocol-support-apig.zip`
+    
+    - Run the following command:
+  
+        `sam deploy --guided`
+    
+    - Respond to the following prompts:
+        - Enter in a stack name: 
+        - Select a region: **Press enter to leave as default**
+        - Parameter CreateServer [true]: **Press enter to leave as default**
+        - Parameter SecretsManagerRegion []: **Press enter to leave as default**
+        - Parameter TransferEndpointType [PUBLIC]: **Press enter to leave as default**
+        - Parameter TransferSubnetIDs []: **Press enter to leave as default**
+        - Parameter TransferVPCID []: **Press enter to leave as default**
+        - Confirm changes before deploy[y/N]: **n**
+        - Allow SAM CLI IAM role creation[Y/n]: **y**
+        - Disable rollback [y/N]: **n**
+        - Save arguments to configuration file [Y/n]: **y**
+        - SAM configuration file [samconfig.toml]: **Press enter to leave as default**
+        - SAM configuration environment [default]: **Press enter to leave as default**
 
 **Creating Transfer Family Server**
 Navigate to the AWS Secrets Manager console (https://console.aws.amazon.com/secretsmanager)
