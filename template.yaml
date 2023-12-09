@@ -34,10 +34,10 @@ Resources:
       VersioningConfiguration:
         Status: Enabled
 
-  LambdaExecutionRole:
+  PGPLambdaExecutionRole:
     Type: AWS::IAM::Role
     Properties:
-      RoleName: !Sub '${AWS::StackName}-LambdaExecutionRole'
+      RoleName: !Sub '${AWS::StackName}-PGPLambdaExecutionRole'
       AssumeRolePolicyDocument:
         Version: "2012-10-17"
         Statement:
@@ -71,7 +71,7 @@ Resources:
       Runtime: python3.8
       MemorySize: 256
       Timeout: 20
-      Role: !GetAtt LambdaExecutionRole.Arn
+      Role: !GetAtt PGPLambdaExecutionRole.Arn
       Handler: index.lambda_handler
       # The code property would remain the same
       # ...
