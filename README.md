@@ -74,7 +74,7 @@ Final Project for CS4501
         - SAM configuration file [samconfig.toml]: **Press enter to leave as default**
         - SAM configuration environment [default]: **Press enter to leave as default**
 
-**Creating Transfer Family Server**
+### Deploy a Transfer Family server with a custom Secrets Manager based identity provider via CloudFormation stack
 Navigate to the AWS Secrets Manager console (https://console.aws.amazon.com/secretsmanager)
 Create a new secret by choosing Store a new secret.
 Choose Other type of secret.
