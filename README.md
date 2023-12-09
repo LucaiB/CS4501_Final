@@ -1,6 +1,7 @@
 # CS4501_Final
 Final Project for CS4501
 
+## Step-by-Step Instructions
 
 ### CloudShell - Deploying setupEnvironment bash script and CloudFormation stacks.
 
