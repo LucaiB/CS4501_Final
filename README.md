@@ -1,5 +1,7 @@
 # CS4501_Final
-Final Project for CS4501
+Final Project for CS4501.
+
+This readme can be used to recreate our project in your own AWS environment. 
 
 ## Step-by-Step Instructions
 
