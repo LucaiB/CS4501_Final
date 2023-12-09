@@ -3,7 +3,7 @@ Final Project for CS4501
 
 ## Step-by-Step Instructions
 
-### CloudShell - Deploying setupEnvironment bash script and CloudFormation stacks.
+### Deploying environment setup bash script and CloudFormation stacks.
 
 - Open CloudShell within your AWS account. 
 - Run the following command to clone this Git repository to access the required files for this project: 
@@ -87,7 +87,7 @@ Create the following key-value pairs. The key names are case-sensitive.
     
 |         Secret Key                                                               |     Secret Value                                                                 |
 |:--------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------:|
-|       Password                                                                   |        TestPassword1234!                                                         |
+|       Password                                                                   |        YourPassword1234!                                                         |
 |       Role                                                                       |      INSERT-TRANSER-FAMILY-USER-ROLE-ARN (Can be found in CloudFormation stack output) |
 |       HomeDirectoryDetails                                                       |      [{"Entry": "/", "Target": "/**INSERT-S3-BUCKET-NAME/INSERT-USER-NAME**"}]   |
 |       HomeDirectoryType                                                          |        LOGICAL                                                                   |
