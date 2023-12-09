@@ -90,29 +90,39 @@ Create the following key-value pairs. The key names are case-sensitive.
 
 </div>       
 
-**Getting Required Values from CloudFormation Console**
-To get the specific role ARN and S3 bucket name, go to the CloudFormation console and select:
+#### Option 1 Continued: Getting Required Values from CloudFormation Console
+- To get the specific role ARN and S3 bucket name, go to the CloudFormation console and select:
+    
+    -  Stacks -> Stack 1 Name (Ex. pgpdecryptionstack) -> Outputs 
 
-Stacks -> Stack 1 Name (Ex. pgpdecryptionstack) -> Outputs
 
+#### Finish Creating the Secret
+ - Click "Next"
+ - Name the secret in the format: **aws/transfer/server-id/username**
+    - If you deployed Transfer Family CloudFormation stack: 
+        - Go to CloudFormation console and select: Stacks -> Stack 1 Name (Ex. transferFamilyServer) -> Outputs
+            - Select "ServerId"    
+    - If you did not deploy Transfer Family CloudFormation stack: 
+        - Go to the Transfer Family console, select "Servers", and then select the appropriate serverId. 
+ 
+ - Select "Next" -> "Next" -> "Store" 
 
-Click "Next"
+### Adding Private Key to Secrets Manager
+- Navigate to the AWS Secrets Manager console: https://console.aws.amazon.com/secretsmanager 
+- Select "Secrets"
+- Select the secret named: "PGP_PrivateKey"
+- Select "Retrieve secret value"
+- Select "Edit"
+- Remove the text: "Within the Secrets Manager console, paste your PGP private key here"
+- Paste in your PGP Private key
+- Select "Save"
 
-Name the secret in the format: aws/transfer/server-id/username
+---
 
-If you deployed Transfer Family CloudFormation stack:
-Go to CloudFormation console and select: Stacks -> Stack 1 Name (Ex. transferFamilyServer) -> Outputs
-Select "ServerId"
-If you did not deploy Transfer Family CloudFormation stack:
-Go to the Transfer Family console, select "Servers", and then select the appropriate serverId.
-Select "Next" -> "Next" -> "Store"
-
-**Adding Private Key to Secrets Manager**
-Navigate to the AWS Secrets Manager console: https://console.aws.amazon.com/secretsmanager
-Select "Secrets"
-Select the secret named: "PGP_PrivateKey"
-Select "Retrieve secret value"
-Select "Edit"
-Remove the text: "Within the Secrets Manager console, paste your PGP private key here"
-Paste in your PGP Private key
-Select "Save"
+### Attach Managed Workflow to Transfer Family Server
+- On the Transfer Family console, select "Servers"
+- Select your desired Transfer Family server
+- Under "Additional details", select "Edit"
+- Select the Workflow with the description: "Transfer Family Workflow for PGP decryption process"
+- Select the Managed workflow execution role with the name: "PGPDecryptionManagedWorkflowRole"
+- Select "Save"
