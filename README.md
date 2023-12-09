@@ -35,7 +35,8 @@ Final Project for CS4501
         - Save arguments to configuration file [Y/n]: **y**
         - SAM configuration file [samconfig.toml]: **Press enter to leave as default**
         - SAM configuration environment [default]: **Press enter to leave as default**
-
+     
+---
 
 **Creating Transfer Family Server by deploying a Transfer Family Server with a custom Secrets Manager based identity provider via CloudFormation stack.**
 
@@ -73,6 +74,8 @@ Final Project for CS4501
         - Save arguments to configuration file [Y/n]: **y**
         - SAM configuration file [samconfig.toml]: **Press enter to leave as default**
         - SAM configuration environment [default]: **Press enter to leave as default**
+     
+---
 
 ### Deploy a Transfer Family server with a custom Secrets Manager based identity provider via CloudFormation stack
 Navigate to the AWS Secrets Manager console (https://console.aws.amazon.com/secretsmanager)
@@ -90,7 +93,7 @@ Create the following key-value pairs. The key names are case-sensitive.
 
 </div>       
 
-#### Option 1 Continued: Getting Required Values from CloudFormation Console
+#### Getting Required Values from CloudFormation Console
 - To get the specific role ARN and S3 bucket name, go to the CloudFormation console and select:
     
     -  Stacks -> Stack 1 Name (Ex. pgpdecryptionstack) -> Outputs 
@@ -105,7 +108,9 @@ Create the following key-value pairs. The key names are case-sensitive.
     - If you did not deploy Transfer Family CloudFormation stack: 
         - Go to the Transfer Family console, select "Servers", and then select the appropriate serverId. 
  
- - Select "Next" -> "Next" -> "Store" 
+ - Select "Next" -> "Next" -> "Store"
+
+---
 
 ### Adding Private Key to Secrets Manager
 - Navigate to the AWS Secrets Manager console: https://console.aws.amazon.com/secretsmanager 
